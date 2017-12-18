@@ -1,0 +1,10 @@
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0, .12);
+  > a { text-decoration: none; }
+
+  .card-title {
+    font-size: $font-size-base + 0.10rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}

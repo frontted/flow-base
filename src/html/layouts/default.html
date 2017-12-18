@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  {% block head %}{% endblock %}
+  <!-- App CSS -->
+  <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex flex-column position-relative h-100">
+    {% include 'layouts/navbars/_navbar.html' %}
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" fullbleed push has-scrolling-region>
+        <div class="mdk-drawer-layout__content mdk-header-layout__content--scrollable">
+          <!-- CONTENT BODY -->
+          {% block page %}{% endblock %}
+        </div>
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="mdk-drawer__inner">
+                  {% include 'layouts/_sidebar.html' %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- // END drawer-layout -->
+  </div>
+
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/vendor/popper.js"></script>
+  <script src="assets/vendor/bootstrap.min.js"></script>
+
+  <script src="assets/vendor/dom-factory.js"></script> <!-- DOM Factory -->
+  <script src="assets/vendor/material-design-kit.js"></script> <!-- MDK -->
+
+
+  <script>
+    (function() {
+      'use strict';
+
+      // Self Initialize DOM Factory Components
+      domFactory.handler.autoInit()
+
+      // Connect button(s) to drawer(s)
+      var sidebarToggle = Array.prototype.slice.call(document.querySelectorAll('[data-toggle="sidebar"]'))
+
+      sidebarToggle.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+          var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+          var drawer = document.querySelector(selector)
+          if (drawer) {
+            drawer.mdkDrawer.toggle()
+          }
+        })
+      })
+
+      $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
+      $('[data-toggle="popover"]').popover();
+
+    })();
+  </script>
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

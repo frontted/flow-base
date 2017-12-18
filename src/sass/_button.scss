@@ -1,0 +1,23 @@
+main .btn {
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-nav {
+  border: 1px solid #DBDCE6;
+  border-radius: 5px;
+  color: $body-color;
+  pointer-events: none;
+}
+
+.btn-white {
+  background: #ffffff;
+  color: $body-color;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 1px rgba(0,0,0, .14);
+  &:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0, .34);
+  }
+}

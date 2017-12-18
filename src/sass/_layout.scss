@@ -1,0 +1,43 @@
+html {overflow: hidden; height: 100%;}
+body { height: 100%;}
+
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+.container-fluid,.container {
+  & > .card-deck > .card, .page-section,  {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.container-wrapper {
+  padding: $grid-gutter-width;
+}
+
+.mdk-drawer-layout__content {
+   > .container:first-of-type,
+   > .container-fluid:first-of-type,
+   > .container:first-of-type,
+   > .bg-white >
+   .container:first-of-type {
+    padding-top: $grid-gutter-width;
+  }
+  > .container { padding-bottom: $navbar-height; }
+}
+
+// CARD MARGINS
+.container, .container-fluid {
+  > .tab-content , & > .row > div[class^="col"] > .card {
+    margin-bottom: $grid-gutter-width;
+  }
+  > .tab-content , > .tab-content > .tab-pane > .row > div[class^="col"] > .card, & > .row > div[class^="col"] > .card {
+    border: 0;
+  }
+}
+.mdk-drawer-layout__content {
+  .container > .card, .container-fluid > .card, .container-fluid > .card-group, .container-fluid > .page-section {
+    margin-bottom: $grid-gutter-width;
+  }
+}

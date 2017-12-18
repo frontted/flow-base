@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius($badge-border-radius);
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+
+  .material-icons {
+    font-size: $font-size-base;
+    position: relative;
+    top: 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    color: $value !important;
+    border:1px solid $value;
+
+    &[href] {
+      @include hover-focus {
+        color: $value !important;
+        text-decoration: none;
+        background-color: darken($value, 10%);
+      }
+    }
+  }
+}

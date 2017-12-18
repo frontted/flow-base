@@ -1,0 +1,12 @@
+.table tr th {
+  font-size: 12px;
+}
+
+.table-dark {
+  background-color: theme-color('primary-dark');
+}
+
+.table .thead-dark th {
+ background-color: theme-color('primary-dark');
+ color: #eff4f8;
+}

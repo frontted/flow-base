@@ -1,0 +1,86 @@
+<nav class="drawer drawer--dark">
+  <!-- HEADING -->
+  <div class="drawer-heading mt-2">
+    Menu
+  </div>
+  <!-- MENU -->
+  <ul class="drawer-menu" id="mainMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item  {% if slug.includes('index') %} active {% endif %}">
+      <a href="index.html">
+        <i class="material-icons">home</i>
+        <span class="drawer-menu-text"> Dashboard</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-buttons' %}active{% endif %}">
+      <a href="ui-buttons.html">
+        <i class="material-icons">mouse</i>
+        <span class="drawer-menu-text">Buttons</span>
+      </a>
+    </li>
+     <li class="drawer-menu-item {% if slug == 'ui-forms' %}active{% endif %}">
+      <a href="ui-forms.html">
+        <i class="material-icons">edit</i>
+        <span class="drawer-menu-text">Forms</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-grid' %}active{% endif %}">
+      <a href="ui-grid.html">
+        <i class="material-icons">dashboard</i>
+        <span class="drawer-menu-text">Grid</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-navs' %}active{% endif %}">
+      <a href="ui-navs.html">
+         <i class="material-icons">tables</i>
+         <span class="drawer-menu-text">Navs</span>
+       </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-icons' %}active{% endif %}">
+      <a href="ui-icons.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text">Material Icons</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-typography' %}active{% endif %}">
+      <a href="ui-typography.html">
+        <i class="material-icons">font_download</i>
+        <span class="drawer-menu-text">Typography</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-tables' %}active{% endif %}">
+      <a href="ui-tables.html">
+        <i class="material-icons">list</i>
+        <span class="drawer-menu-text">Tables</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'ui-notifications' %}active{% endif %}">
+      <a href="ui-notifications.html">
+        <i class="material-icons">notifications_active</i>
+        <span class="drawer-menu-text">Notifications</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'forms-form-controls'%}active{% endif %}">
+      <a href="form-controls.html">
+        <i class="material-icons">text_format</i>
+        <span class="drawer-menu-text">Form controls</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'forms-checkboxes-radios'%}active{% endif %}">
+      <a href="checkboxes-radios.html">
+        <i class="material-icons">check_box</i>
+        <span class="drawer-menu-text">Checkboxes and Radios</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#pageMenu" aria-controls="collapseOne">
+        <i class="material-icons">layers</i>
+        <span class="drawer-menu-text">Submenu Items</span>
+      </a>
+      <ul class="collapse" id="pageMenu">
+        <li class="drawer-menu-item"><a href="tickets.html">Item #1</a></li>
+        <li class="drawer-menu-item"><a href="blog-post.html">Item #2</a></li>
+        <li class="drawer-menu-item"><a href="profile.html">Item #3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

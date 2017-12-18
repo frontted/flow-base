@@ -1,0 +1,35 @@
+.container-fluid > .nav > .nav-item {
+  a {padding-top: 0;}
+}
+.nav-item {
+  .nav-link {
+    color: $body-color;
+    font-size: 1rem;
+    font-weight: bold;
+    &.active {
+      color: theme-color('primary');
+    }
+  }
+}
+
+.nav.nav-tabs-notifications {
+  border-bottom: 1px solid theme-color('border-color');
+  .nav-item {
+    background: transparent;
+    color: theme-color('text-color');
+    .nav-link {
+      &.active {
+        background: transparent;
+        color: theme-color('primary')
+      }
+    }
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    &.active {
+      color: #ffffff;
+    }
+  }
+}

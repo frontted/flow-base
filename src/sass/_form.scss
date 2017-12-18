@@ -1,0 +1,44 @@
+.input-group--inline {
+  position: relative;
+  .input-group-addon {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    vertical-align: middle;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    color: $body-color;
+    padding: 0 $spacer/2;
+  }
+  .form-control:not(:first-child) {
+    text-indent: $spacer * 1.5;
+    z-index: initial;
+    border-radius: 5px;
+    &:hover, &:focus, &:active {
+      z-index: initial;
+    }
+  }
+}
+
+.input-group {
+  &.input-daterange {
+    .input-group-addon {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.form-control {
+  background: $body-bg;
+  box-shadow: inset 0 1px 2px 0 rgba(66,71,112,0.12);
+  &:focus {
+    box-shadow: 0 2px 4px 0 #E6E9ED;
+  }
+}
+
+.input-flush .form-control {
+  border-radius: 0 !important;
+  border:0 !important;
+}

@@ -1,0 +1,202 @@
+---
+title: Flow
+slug: ui-forms
+---
+{% extends "./layouts/default.html" %}
+
+{% block page %}
+<div class="container-fluid">
+  <h2>Forms</h2>
+  <p class="lead">
+    Bootstrap Form Elements
+  </p>
+
+  <div class="card card-body">
+    <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Example select</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect2">Example multiple select</label>
+      <select multiple class="form-control" id="exampleSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleTextarea">Example textarea</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+    <fieldset class="form-group">
+      <legend>Radio buttons</legend>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="form-check">
+      <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
+      <div class="form-check disabled">
+      <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+          Option three is disabled
+        </label>
+      </div>
+    </fieldset>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input">
+        Check me out
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+
+   <h4 class="page-section">Custom styling</h4>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Custom Checkboxes</h4>
+    </div>
+    <div class="card-body">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Check this custom checkbox</span>
+      </label>
+    </div>
+    <div class="card-header">
+      Custom checkboxes can also utilize the <code>:indeterminate</code> pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+    </div>
+    <div class="card-body">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input ind-checkbox">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Check this custom checkbox</span>
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Radios</h4>
+    </div>
+    <div class="card-body">
+      <label class="custom-control custom-radio">
+        <input id="radio1" name="radio" type="radio" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Toggle this custom radio</span>
+      </label>
+      <label class="custom-control custom-radio">
+        <input id="radio2" name="radio" type="radio" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Or toggle this other custom radio</span>
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Disabled</h4>
+    </div>
+    <div class="card-body">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" disabled>
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Check this custom checkbox</span>
+      </label>
+
+      <label class="custom-control custom-radio">
+        <input id="radio3" name="radioDisabled" type="radio" class="custom-control-input" disabled>
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Toggle this custom radio</span>
+      </label>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Stacked</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-controls-stacked">
+        <label class="custom-control custom-radio">
+          <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Toggle this custom radio</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Or toggle this other custom radio</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Checkbox buttons</h4>
+    </div>
+    <div class="card-body">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">
+        Radio buttons
+      </h4>
+    </div>
+    <div class="card-body">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
